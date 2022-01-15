@@ -1,6 +1,6 @@
 # editor-markdown-seainthebottle
 
-rz-glitch님의 rx-editor-markdown을 fork하였습니다.
+rzglitch님의 rx-editor-markdown을 fork하였습니다.
 
 본 에디터는 라이믹스에서 마크다운을 사용할 수 있도록 하는 에디터입니다.
 
