@@ -1,14 +1,6 @@
 "use strict";
 
 (function ($) {
-	// Convert YouTube links.
-	var convertYouTube = function (str) {
-		var regexp = /https?:\/\/(www\.youtube(?:-nocookie)?\.com\/(?:watch\?v=|v\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]+)\S*/g;
-		var embed =
-			'<div class="video_container"><iframe src="https://www.youtube.com/embed/$2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
-		return String(str).replace(regexp, embed);
-	};
-
 	// Insert content at cursor position.
 	var insertContent = function(editor, content) {
 		var insert_form = $(editor.id).closest("form");
@@ -77,7 +69,6 @@
 				} else {
 					return;
 				}
-				content = convertYouTube(content);
 				insertContent(md_editor, content);
 				event.preventDefault();
 			});
