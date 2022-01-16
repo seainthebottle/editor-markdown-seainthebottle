@@ -8,7 +8,7 @@ rzglitch님의 rx-editor-markdown을 fork하였습니다.
 
 v0.3.0 부터 에디터 js를 번들로 제공합니다.
 
-에디터 소스코드는 [https://github.com/rzglitch/rg-mdeditor](https://github.com/rzglitch/rg-mdeditor)에 있습니다.
+에디터 소스코드는 [https://github.com/seainthebottle/mdeditor-seainthebottle](https://github.com/seainthebottle/mdeditor-seainthebottle)에 있습니다.
 
 ## 라이선스
 
