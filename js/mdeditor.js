@@ -20,7 +20,8 @@
 			var content_key = editor.data("editor-content-key-name");
 			var primary_key = editor.data("editor-primary-key-name");
 			var insert_form = editor.closest("form");
-			var content_input = insert_form
+			// 편집 textarea 내의 텍스트 내용
+			var content_input = insert_form 
 				.find("input,textarea")
 				.filter("[name=" + content_key + "]");
 			var markdown_input = insert_form
@@ -75,9 +76,12 @@
 
 			// Copy edited content to the actual input element.
 			editor.on("mouseout change", function (event) {
+				// preview로 markdown 변환된 내용을 반영해 주고
 				md_editor.renderMarkdownData();
+				// preview의 내용을 가져온다.
 				var content = md_editor.getHtmlText();
 				content_input.val(content);
+				// markdown text는 따로 가져온다.
 				var mdcontent = md_editor.getMarkdownText();
 				markdown_input.val(mdcontent);
 				event.preventDefault();
@@ -86,6 +90,7 @@
 	});
 
 	// Simulate CKEditor for file upload integration.
+	// 그림 등의 파일 업로드 시 CKEditor 루틴을 차용한다.
 	window._getCkeInstance = function (editor_sequence) {
 		var md_editor = "#mdeditor_" + editor_sequence;
 		var editor_obj = new rgMdEditor();
