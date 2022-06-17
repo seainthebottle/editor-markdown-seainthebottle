@@ -59,7 +59,7 @@
 			editorRelKeys[editor_sequence].content = content_input;
 			editorRelKeys[editor_sequence].func = editorGetContent;
 
-			// Clean up pasted content.
+			/*// Clean up pasted content.
 			$(editor_textarea).on("paste", function (event) {
 				var clipboard_data =
 					event.clipboardData ||
@@ -72,7 +72,7 @@
 				}
 				insertContent(md_editor, content);
 				event.preventDefault();
-			});
+			});*/
 
 			// Copy edited content to the actual input element.
 			editor.on("mouseout change", function (event) {
