@@ -1,4 +1,4 @@
-# editor-markdown-seainthebottle
+# rhymix-markdown-editor-seainthebottle
 
 rzglitch님의 rx-editor-markdown을 fork하였습니다.
 
