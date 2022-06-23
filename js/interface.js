@@ -1,6 +1,6 @@
 function _getSimpleEditorInstance(editor_sequence) {
 	var md_editor = "#mdeditor_" + editor_sequence;
-	var editor_obj = new RhymixMarkdownEditor();
+	var editor_obj = new MarkdownEditor();
 	editor_obj.selectInitializedEditor(md_editor);
 
 	return editor_obj;

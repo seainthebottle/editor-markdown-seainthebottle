@@ -35,8 +35,8 @@
 				.find("input,textarea")
 				.filter("[name=" + primary_key + "]");
 
-			var md_editor = new RhymixMarkdownEditor();
-			md_editor.init(editor_wrap);
+			var md_editor = new MarkdownEditor();
+			md_editor.init(editor_wrap, content_key);
 			md_editor.addPreviewClass("rhymix_content");
 
 			md_editor.setHeight(editor_height);
@@ -77,7 +77,7 @@
 	// 그림 등의 파일 업로드 시 CKEditor 루틴을 차용한다.
 	window._getCkeInstance = function (editor_sequence) {
 		var md_editor = "#mdeditor_" + editor_sequence;
-		var editor_obj = new RhymixMarkdownEditor();
+		var editor_obj = new MarkdownEditor();
 		editor_obj.selectInitializedEditor(md_editor);
 
 		var turndownService = new TurndownService();
